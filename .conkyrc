@@ -1,0 +1,37 @@
+# Conky, a system monitor, based on torsmo
+
+cpu_avg_samples 2
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+net_avg_samples 2
+no_buffers yes
+out_to_x no
+out_to_console yes
+out_to_stderr no
+extra_newline no
+own_window no
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+
+TEXT
+[
+  {"color": "\#ff9900", "full_text": " | "},
+  {"color": "\#ffffff", "full_text": " $nodename "},
+  {"color": "\#ff9900", "full_text": " | "},
+  {"color": "\#ffffff", "full_text": " cpu $cpu% "},
+  {"color": "\#ff9900", "full_text": " | "},
+  {"color": "\#ffffff", "full_text": " ram $mem/$memmax "},
+  {"color": "\#ff9900", "full_text": " | "},
+  {"color": "\#ffffff", "full_text": " net ${upspeed eth0}/s up ${downspeed eth0}/s down "},
+  {"color": "\#ff9900", "full_text": " | "},
+  {"color": "\#ffffff", "full_text": " uptime $uptime "},
+  {"color": "\#ff9900", "full_text": " | "},
+  {"color": "\#ffffff", "full_text": " ${time %d.%m.%y %H:%M:%S }"},
+  {"color": "\#ff9900", "full_text": " | "}
+],
