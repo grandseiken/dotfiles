@@ -7,12 +7,14 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
-"not filetype plugin indent on since overrides tabstop/shiftwidth
+"not enabled since overrides tabstop/shiftwidth :(
+"filetype plugin indent on
 syntax on
 set encoding=utf-8
-set expandtab
 set tabstop=2
+set expandtab
 set shiftwidth=2
+set softtabstop=2
 set autoindent
 set smartindent
 set laststatus=2
