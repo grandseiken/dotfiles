@@ -37,9 +37,9 @@ exec gnome-settings-daemon
 exec gnome-power-manager
 exec gnome-volume-manager
 # Runs gnome-session (seems to make compositing work)
-exec /home/sdtaylor/bg.sh
+exec /home/stu/bg.sh
 # Desktop background
-exec display -window root /home/sdtaylor/highway1920c.png
+exec display -window root /home/stu/background.png
 
 # Font for window titles. ISO 10646 = Unicode
 # OVERRIDE tkoeppe=comic-sans
