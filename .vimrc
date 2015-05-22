@@ -7,7 +7,6 @@ Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 
 "not filetype plugin indent on since overrides tabstop/shiftwidth
-filetype plugin on
 syntax on
 set encoding=utf-8
 set expandtab
