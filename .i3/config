@@ -1,0 +1,170 @@
+# STUBOARD i3 COMPUTER MACHINE FILE
+# Wizard Wizard Wizard
+# i3 config file (v4)
+
+# Use one workspace across both screens (i.e. Not Shit)
+fake-outputs 5760x1080+0+0
+# Remove extra chrome border
+for_window [title=" - Google Chrome$"] border none
+
+# Use WINDOWS KEY
+set $mod Mod4
+# Make things not shit
+focus_follows_mouse no
+
+# Lock screen
+# bindsym $mod+Shift+Z exec xscreensaver-command -lock
+bindsym $mod+Shift+Z exec i3lock -b -t -i /home/stu/wallpapers/temper.temper.tamper.png
+# Defaults
+default_orientation horizontal
+
+# default = DEFAULT
+workspace_layout default
+# Makes things confusing! :)
+workspace_auto_back_and_forth yes
+
+# Start a terminal
+bindsym $mod+Return exec gnome-terminal
+# THE MOST USEFUL THING
+bindsym $mod+Shift+Return exec google-chrome
+# Why would you need anything other than terminal and chrome??? DON'T USE
+bindsym $mod+d exec dmenu_run
+# Kill everything all the time
+bindsym $mod+Shift+Q kill
+
+# Autorun
+exec gnome-settings-daemon
+exec gnome-power-manager
+exec gnome-volume-manager
+# Runs gnome-session (seems to make compositing work)
+exec /home/sdtaylor/bg.sh
+# Desktop background
+exec display -window root /home/sdtaylor/highway1920c.png
+
+# Font for window titles. ISO 10646 = Unicode
+# OVERRIDE tkoeppe=comic-sans
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+# I'VE NEVER USED THIS
+floating_modifier $mod
+
+# Split in horizontal orientation.
+# Doing layout default first stops those useless one-child container things
+# from POPPING UP EVERYWHERE AHHH FUCK YOU MICHAEL
+bindsym $mod+v layout default; split h
+bindsym $mod+z layout default; split h
+
+# Split in vertical orientation (LIKEWISE)
+bindsym $mod+h layout default; split v
+bindsym $mod+x layout default; split v
+
+# Alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window (NERD)
+bindsym $mod+Shift+J move left
+bindsym $mod+Shift+K move down
+bindsym $mod+Shift+L move up
+bindsym $mod+Shift+colon move right
+
+# Alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Change split (for accidental use only)
+bindsym $mod+c layout toggle split
+
+# Fullscreen = FULL HOUSE
+bindsym $mod+f fullscreen
+
+# Wrangle with death
+bindsym $mod+q layout default
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout stacking
+
+# FORMAT; INSTALL WINDOWS 98
+bindsym $mod+Shift+space floating toggle
+# Follow this 1 weird old tip for a floating window.
+# Steve Jobs hates this!
+bindsym $mod+space focus mode_toggle
+
+# Focus parent
+bindsym $mod+a focus parent
+# What does this I don't even
+bindsym $mod+s focus child
+
+# WORKSPACES
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+# MOVESPACES
+bindsym $mod+Shift+exclam move workspace 1
+bindsym $mod+Shift+quotedbl move workspace 2
+bindsym $mod+Shift+sterling move workspace 3
+bindsym $mod+Shift+dollar move workspace 4
+bindsym $mod+Shift+percent move workspace 5
+bindsym $mod+Shift+asciicircum move workspace 6
+bindsym $mod+Shift+ampersand move workspace 7
+bindsym $mod+Shift+asterisk move workspace 8
+bindsym $mod+Shift+parenleft move workspace 9
+bindsym $mod+Shift+parenright move workspace 10
+
+# Super quick reload config
+bindsym $mod+Shift+C reload
+# Super quick restart i3
+bindsym $mod+Shift+R restart
+# Die X Die
+bindsym $mod+Shift+E exit
+
+# The whole point of a tiling window manager is you don't
+# need to resize all your shit all the time. DEPRECATED
+mode "resize" {
+bindsym j resize shrink left 10 px or 10 ppt
+bindsym Shift+J resize grow   left 10 px or 10 ppt
+
+bindsym k resize shrink down 10 px or 10 ppt
+bindsym Shift+K resize grow   down 10 px or 10 ppt
+
+bindsym l resize shrink up 10 px or 10 ppt
+bindsym Shift+L resize grow   up 10 px or 10 ppt
+
+bindsym semicolon resize shrink right 10 px or 10 ppt
+bindsym Shift+colon resize grow   right 10 px or 10 ppt
+
+bindsym Left resize shrink left 10 px or 10 ppt
+bindsym Shift+Left resize grow   left 10 px or 10 ppt
+
+bindsym Down resize shrink down 10 px or 10 ppt
+bindsym Shift+Down resize grow   down 10 px or 10 ppt
+
+bindsym Up resize shrink up 10 px or 10 ppt
+bindsym Shift+Up resize grow   up 10 px or 10 ppt
+
+bindsym Right resize shrink right 10 px or 10 ppt
+bindsym Shift+Right resize grow   right 10 px or 10 ppt
+
+# Why not bindsym ANY_KEY mode "default"?
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+bar {
+    status_command ~/conky.sh
+    # Get out my face
+    mode hide
+}
