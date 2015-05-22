@@ -4,6 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 "not filetype plugin indent on since overrides tabstop/shiftwidth
