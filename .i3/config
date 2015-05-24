@@ -13,8 +13,9 @@ set $mod Mod4
 focus_follows_mouse no
 
 # Lock screen
+# exec xscreensaver -nosplash
 # bindsym $mod+Shift+Z exec xscreensaver-command -lock
-bindsym $mod+Shift+Z exec i3lock -b -t -i /home/stu/wallpapers/temper.temper.tamper.png
+bindsym $mod+Shift+Z exec i3lock -b -t -i /home/stu/background.png
 # Defaults
 default_orientation horizontal
 

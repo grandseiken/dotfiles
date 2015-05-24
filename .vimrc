@@ -11,16 +11,19 @@ call vundle#end()
 "filetype plugin indent on
 syntax on
 set encoding=utf-8
+
+"indentation
 set tabstop=2
 set expandtab
 set shiftwidth=2
 set softtabstop=2
 set autoindent
 set smartindent
+
+"miscellaeneous
 set laststatus=2
 set nocompatible
 set showmode
-set showcmd
 set showcmd
 set ttyfast
 set ignorecase
@@ -29,8 +32,12 @@ set showmatch
 set textwidth=79
 "nice, but means copy-paste adds nasty trailing whitespace :(
 "set colorcolumn=81
+
+"highlight trailing whitespace
 set list
 set listchars=trail:.
+
+"colour scheme
 set background=dark
 se t_Co=16
 let g:solarized_visibility = "high"
