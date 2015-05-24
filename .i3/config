@@ -15,7 +15,7 @@ focus_follows_mouse no
 # Lock screen
 # exec xscreensaver -nosplash
 # bindsym $mod+Shift+Z exec xscreensaver-command -lock
-bindsym $mod+Shift+Z exec i3lock -b -t -i /home/stu/background.png
+bindsym $mod+Shift+Z exec i3lock -b -t -i $HOME/background.png
 # Defaults
 default_orientation horizontal
 
@@ -38,9 +38,9 @@ exec gnome-settings-daemon
 exec gnome-power-manager
 exec gnome-volume-manager
 # Runs gnome-session (seems to make compositing work)
-exec /home/stu/bg.sh
+exec $HOME/bg.sh
 # Desktop background
-exec display -window root /home/stu/background.png
+exec display -window root $HOME/background.png
 
 # Font for window titles. ISO 10646 = Unicode
 # OVERRIDE tkoeppe=comic-sans
