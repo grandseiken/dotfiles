@@ -3,7 +3,7 @@
 # i3 config file (v4)
 
 # Use one workspace across both screens (i.e. Not Shit)
-fake-outputs 5760x1080+0+0
+fake-outputs 3840x1080+0+0
 # Remove extra chrome border
 for_window [title=" - Google Chrome$"] border none
 
