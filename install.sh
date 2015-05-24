@@ -17,3 +17,5 @@ done
 
 # Set up terminal colours.
 $(dirname $0)/gnome-terminal/install.sh -s dark -p Default
+# Change shell to zsh.
+chsh /usr/bin/zsh
