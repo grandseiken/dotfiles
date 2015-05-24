@@ -1,10 +1,11 @@
 # Prerequisites:
 sudo apt-get install i3 i3lock zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+rm -rf ~/.vim/bundle/Vundle.vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Make symlinks to files in home directory.
-TARGETS=".i3/config .vim/colors .vimrc .conkyrc conky.sh"
+TARGETS=".i3/config .zshrc .vim/colors .vimrc dircolors .conkyrc conky.sh"
 
 for TARGET in $TARGETS; do
   DOTFILE=$(pwd)/$(dirname $0)/$TARGET
