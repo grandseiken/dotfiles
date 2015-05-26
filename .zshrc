@@ -77,7 +77,15 @@ eval `dircolors ~/dircolors/dircolors.ansi-universal`
 # Use dircolors for directory expansion colours.
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# Force GB keyboard.
+setxkbmap gb
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+# Source extra per-machine configuration.
+if [ -f $HOME/.zsh_extra ]; then
+  source $HOME/.zsh_extra
+fi
