@@ -29,7 +29,7 @@ set ttyfast
 set ignorecase
 set smartcase
 set showmatch
-set textwidth=79
+set textwidth=80
 "nice, but means copy-paste adds nasty trailing whitespace :(
 "set colorcolumn=81
 
