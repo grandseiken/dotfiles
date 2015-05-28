@@ -1,6 +1,6 @@
 # Prerequisites:
 sudo apt-get install i3 i3lock zsh
-sudo apt-get imagemagick  # for desktop background
+sudo apt-get install imagemagick  # for desktop background
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 rm -rf ~/.vim/bundle/Vundle.vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
