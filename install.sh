@@ -6,7 +6,7 @@ rm -rf ~/.vim/bundle/Vundle.vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Make symlinks to files in home directory.
-TARGETS=".i3/config .zshrc .vim/colors .vimrc dircolors .conkyrc conky.sh"
+TARGETS=".profile .i3/config-template .zshrc .vim/colors .vimrc dircolors .conkyrc conky.sh"
 
 for TARGET in $TARGETS; do
   DOTFILE=$(pwd)/$(dirname $0)/$TARGET

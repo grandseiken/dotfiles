@@ -2,8 +2,6 @@
 # Wizard Wizard Wizard
 # i3 config file (v4)
 
-# Use one workspace across both screens (i.e. Not Shit)
-fake-outputs 3840x1080+0+0
 # Remove extra chrome border
 for_window [title=" - Google Chrome$"] border none
 
@@ -25,7 +23,7 @@ workspace_layout default
 workspace_auto_back_and_forth yes
 
 # Start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 # THE MOST USEFUL THING
 bindsym $mod+Shift+Return exec google-chrome
 # Why would you need anything other than terminal and chrome??? DON'T USE
@@ -33,12 +31,6 @@ bindsym $mod+d exec dmenu_run
 # Kill everything all the time
 bindsym $mod+Shift+Q kill
 
-# Autorun
-exec gnome-settings-daemon
-exec gnome-power-manager
-exec gnome-volume-manager
-# Runs gnome-session (seems to make compositing work)
-exec $HOME/bg.sh
 # Desktop background
 exec display -window root $HOME/background.png
 
