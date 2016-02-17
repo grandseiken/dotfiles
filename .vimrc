@@ -5,6 +5,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 call vundle#end()
 
 "not enabled since overrides tabstop/shiftwidth :(
@@ -44,3 +45,7 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termcolors = 16
 colorscheme solarized
+
+"YCM options.
+let g:ycm_complete_in_comments = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
