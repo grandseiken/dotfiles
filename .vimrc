@@ -30,7 +30,7 @@ set ttyfast
 set ignorecase
 set smartcase
 set showmatch
-set textwidth=80
+set textwidth=100
 "nice, but means copy-paste adds nasty trailing whitespace :(
 "set colorcolumn=81
 
@@ -49,3 +49,13 @@ colorscheme solarized
 "YCM options.
 let g:ycm_complete_in_comments = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+"YCM aliases.
+command YGo YcmCompleter GoTo
+command YInc YcmCompleter GoToInclude
+command YImp YcmCompleter GoToImplementation
+command YDec YcmCompleter GoToDeclaration
+command YDef YcmCompleter GoToDefinition
+command YType YcmCompleter GetType
+command YParent YcmCompleter GetParent
+command YDoc YcmCompleter GetDoc
+command YFix YcmCompleter FixIt
