@@ -1,5 +1,5 @@
 # Prerequisites:
-sudo apt-get install i3 i3lock zsh
+sudo apt-get install i3 i3lock zsh conky
 sudo apt-get install imagemagick  # for desktop background
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 rm -rf ~/.vim/bundle/Vundle.vim
@@ -17,6 +17,6 @@ for TARGET in $TARGETS; do
 done
 
 # Set up terminal colours.
-$(dirname $0)/gnome-terminal/install.sh -s dark -p Default
+$(dirname $0)/gnome-terminal/install.sh -s dark
 # Change shell to zsh.
 chsh -s /usr/bin/zsh
