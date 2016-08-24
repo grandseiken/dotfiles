@@ -1,5 +1,5 @@
 # Prerequisites:
-sudo apt-get install i3 i3lock zsh conky
+sudo apt-get install i3 i3lock zsh conky dconf-tools
 sudo apt-get install imagemagick  # for desktop background
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 rm -rf ~/.vim/bundle/Vundle.vim
