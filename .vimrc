@@ -51,8 +51,9 @@ call prop_type_add('YCM_HL_property', {'highlight': 'Normal'})
 " highlight YcmErrorLine guibg=#3f0000
 highlight Pmenu ctermbg=gray guibg=gray
 
+set encoding=utf-8
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set updatetime=2000
-
+set textwidth=100
